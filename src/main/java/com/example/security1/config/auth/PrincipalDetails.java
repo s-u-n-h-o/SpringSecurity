@@ -56,8 +56,7 @@ public class PrincipalDetails implements UserDetails , OAuth2User {
         Collection<GrantedAuthority> collect = new ArrayList<>();
         collect.add(new GrantedAuthority() {
             @Override
-            public String getAuthority() {
-                return user.getRole();
+            public String getAuthority() {return user.getRole();
             }
         });
         return collect;
